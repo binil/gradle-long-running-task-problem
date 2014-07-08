@@ -7,6 +7,7 @@ To reproduce the problem:
 
 1. Open a console window and run:
 
+```
     $ cd rootprj/subprj1
     $ gradle clean runMain
     :subprj1:clean UP-TO-DATE
@@ -18,9 +19,11 @@ To reproduce the problem:
     Tue Jul 08 15:06:53 PDT 2014: time now is 1404857213650
     Tue Jul 08 15:06:55 PDT 2014: time now is 1404857215651
     ...
+```
 
 2. In another console window, run:
 
+```
     $ cd rootprj/subprj2
     $ gradle clean runMain
     :subprj2:clean
@@ -35,6 +38,7 @@ To reproduce the problem:
     Tue Jul 08 15:08:03 PDT 2014: time now is 1404857283642
     Tue Jul 08 15:08:05 PDT 2014: time now is 1404857285659
     ...
+```
 
 3. Kill the subprj2 build with Ctrl+C.
 
@@ -42,6 +46,7 @@ To reproduce the problem:
 
 5. Run subprj2 task again.
 
+```
     $ gradle clean runMain
 
     FAILURE: Build failed with an exception.
@@ -63,6 +68,7 @@ To reproduce the problem:
 
     Total time: 1 mins 3.108 secs
     $
+```
 
 -- 
 Binil Thomas
