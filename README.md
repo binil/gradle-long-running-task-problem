@@ -1,7 +1,31 @@
 Test project demonstrating problems in executing long-running tasks 
-with Gradle. The rootprj contains two sub-projects - subprj1 and subprj2.
-subprj2 depends on subprj1. Both sub-projects have a task - runMain - to
+with Gradle. 
+
+The `rootprj` contains two sub-projects - `subprj1` and `subprj2`.
+`subprj2` depends on `subprj1`. Both sub-projects have a task - `runMain` - to
 execute a long-running java program.
+
+My environment is:
+
+```
+$ gradle --version
+
+------------------------------------------------------------
+Gradle 1.11
+------------------------------------------------------------
+
+Build time:   2014-02-11 11:34:39 UTC
+Build number: none
+Revision:     a831fa866d46cbee94e61a09af15f9dd95987421
+
+Groovy:       1.8.6
+Ant:          Apache Ant(TM) version 1.9.2 compiled on July 8 2013
+Ivy:          2.2.0
+JVM:          1.7.0_51 (Oracle Corporation 24.51-b03)
+OS:           Mac OS X 10.9.2 x86_64
+
+$ 
+```
 
 To reproduce the problem:
 
