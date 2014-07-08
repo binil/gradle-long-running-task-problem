@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+
+sourceCompatibility=1.7
+
+repositories {
+    mavenCentral()
+}
+
+idea {
+    module {
+        jdkName = "1.7"
+    }
+}
+
+task runMain(type: JavaExec) {
+    classpath configurations.compile + sourceSets.main.output
+    main = 'one.Main1'
+}
